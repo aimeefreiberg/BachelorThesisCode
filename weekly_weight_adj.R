@@ -15,14 +15,12 @@ WW[rownames(Factors), "WG"] <- as.character(unlist(Factors[,2]))
 WW[rownames(Factors), "Sex"] <- as.character(unlist(Factors[,3]))
 
 # factor in dominance effect 
-
 genotypes_num = as.numeric(factor(WW[,"Genotype"], levels=c("CC", "CT", "TT")))
 names(genotypes_num) = rownames(WW)
 genotypes_dom = as.numeric(factor(WW[,"Genotype"], levels=c("CC", "CT", "TT")))
 genotypes_dom[genotypes_dom == 3] <- 2  
 
 # test for significant differences
-
 columns <- c("X21","X28","X35","X42","X49","X56","X63","X70","X77","X84","X91","X98","X105","X112","X119","X126")
 anova.pvals.absolute <- c()
 shapiro.pvals.absolute <- c()
