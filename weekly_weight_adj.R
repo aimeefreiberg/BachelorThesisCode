@@ -42,8 +42,7 @@ round(anova.pvals.absolute,4)
 #body weight significantly different from 7 weeks  
 
 # check for siginificant impact of factors
-anova(histo.model)
-#all have significant impact 
+anova(histo.model) # All have significant impact 
 
 #bind genotype data
 WWadjusted <- as.data.frame(WWadjusted)
